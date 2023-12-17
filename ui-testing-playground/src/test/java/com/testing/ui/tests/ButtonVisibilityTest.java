@@ -11,6 +11,10 @@ import com.testing.ui.uibase.UIBaseTest;
 public class ButtonVisibilityTest extends UIBaseTest {
 	@Test
 	public void visibilityTest() {
+		//---------------------------------------------------------------------
+		//Checking for the presence and visibility of different buttons
+		//---------------------------------------------------------------------
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.findElement(By.linkText("Visibility")).click();
 		WebElement hideButton = driver.findElement(By.xpath("//button[text()='Hide']"));

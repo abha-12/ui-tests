@@ -12,8 +12,10 @@ public class OverlappedElementsTest extends UIBaseTest {
 	public void overlappedTest() {
 		driver.findElement(By.linkText("Overlapped Element")).click();
 
+		// ==========================================================================
 		// textbox which is partially visible need to be scrolled into view before
 		// entering text.
+		// ==========================================================================
 
 		driver.findElement(By.id("id")).sendKeys("myId");
 		WebElement nameBox = driver.findElement(By.id("name"));

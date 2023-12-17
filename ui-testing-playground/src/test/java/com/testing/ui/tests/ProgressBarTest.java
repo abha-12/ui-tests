@@ -10,6 +10,11 @@ public class ProgressBarTest extends UIBaseTest {
 	@Test
 	public void progressBarTest() throws InterruptedException {
 		driver.findElement(By.linkText("Progress Bar")).click();
+		
+		//============================================================================
+		//Scenario-->Click start button, wait for progress bar to reach 75% and stop.
+		//============================================================================
+		
 		WebElement stopButton = driver.findElement(By.id("stopButton"));
 		WebElement progressBar = driver.findElement(By.id("progressBar"));
 		String progress = progressBar.getAttribute("aria-valuenow");

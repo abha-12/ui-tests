@@ -11,7 +11,10 @@ public class EventBasedTextInputTest extends UIBaseTest {
 	@Test
 	public void textInputTest() {
 		driver.findElement(By.linkText("Text Input")).click();
+		//-------------------------------------------------------------------------------
 		// Event-based Text input not being recognized by input field
+		//Text entered into input field is to be updated as button name when button is clicked.
+		//-------------------------------------------------------------------------------
 
 		WebElement textInputBox = driver.findElement(By.id("newButtonName"));
 		WebElement updatingButton = driver.findElement(By.id("updatingButton"));
@@ -22,6 +25,9 @@ public class EventBasedTextInputTest extends UIBaseTest {
 		updatingButton.click();
 		updatingButton = driver.findElement(By.id("updatingButton"));
 		System.out.println("Button text after event-based text update : " + updatingButton.getText());
+		
+		//checking whether button changed text after event-based text input.
+		//Emulate a physical keyboard input if text not changed.
 		
 		if (updatingButton.getText().equals("Button That Should Change it's Name Based on Input Value")) {
 			textInputBox.sendKeys("NewButton");

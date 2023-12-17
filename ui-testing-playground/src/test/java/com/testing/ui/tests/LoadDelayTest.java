@@ -15,6 +15,8 @@ public class LoadDelayTest extends UIBaseTest {
 
 		driver.findElement(By.linkText("Load Delay")).click();
 
+		//Waiting for a page to load after clicking link.
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Button')]"))).click();
 		System.out.println("Button clicked.");

@@ -12,8 +12,11 @@ public class MouseOverElementChangeTest extends UIBaseTest {
 	public void mouseOverTest() {
 		driver.findElement(By.linkText("Mouse Over")).click();
 		
+		//========================================================================================
+		//Scenario-->Click link twice and verify the click count is increased by 2
 		//The link changes after the first click, resulting StaleElementReference on Second click
 		//Relocate the element before the second click.
+		//=======================================================================================
 
 		WebElement clickMeLink = driver.findElement(By.linkText("Click me"));
 		WebElement clickCount = driver.findElement(By.id("clickCount"));

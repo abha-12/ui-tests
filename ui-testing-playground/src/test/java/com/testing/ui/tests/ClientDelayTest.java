@@ -12,6 +12,11 @@ import com.testing.ui.uibase.UIBaseTest;
 public class ClientDelayTest extends UIBaseTest {
 	@Test
 	public void clientSideDelayTest() throws InterruptedException {
+		//------------------------------------------------------------------------------
+		//Element appearing after heavy client side JS processing
+		//Test waiting for text to appear in element.
+		//------------------------------------------------------------------------------
+		
 		driver.findElement(By.linkText("Client Side Delay")).click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//button[contains(text(),'Trigger')]")).click();

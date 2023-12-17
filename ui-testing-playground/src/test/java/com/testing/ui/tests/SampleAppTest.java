@@ -11,6 +11,10 @@ public class SampleAppTest extends UIBaseTest{
 	public void loginTest() {
 		driver.findElement(By.linkText("Sample App")).click();
 		
+		//====================================================================================
+		//scenario--> Fill in username(any string) and password(pwd) and verify login status
+		//====================================================================================
+		
 		WebElement loginStatus= driver.findElement(By.id("loginstatus"));
 		System.out.println("Initial login status : "+ loginStatus.getText());
 		

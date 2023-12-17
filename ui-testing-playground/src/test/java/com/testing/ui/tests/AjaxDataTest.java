@@ -13,7 +13,7 @@ public class AjaxDataTest extends UIBaseTest {
 	@Test
 	public void ajaxRequestTest() {
 		driver.findElement(By.linkText("AJAX Data")).click();
-		//Click button and wait for data to appear.
+		//Click button and wait for label text to appear.
 		
 		driver.findElement(By.xpath("//button[contains(text(),'Button')]")).click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
