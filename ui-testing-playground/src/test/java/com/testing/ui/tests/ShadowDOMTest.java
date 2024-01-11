@@ -41,8 +41,6 @@ public class ShadowDOMTest extends UIBaseTest {
 		WebElement cogBtn = shadowRoot.findElement(By.cssSelector("button#buttonGenerate"));
 		cogBtn.click();
 
-		// WebElement textInputField =
-		// shadowRoot.findElement(By.cssSelector("input#editField"));
 		// retrieving the value of guid generated
 		// --------------------------------------
 		String textInput = shadowRoot.findElement(By.cssSelector("input#editField")).getAttribute("value");
